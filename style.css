@@ -1,0 +1,240 @@
+body {
+  background-color: rgb(225, 225, 225);
+  font-family: sans-serif;
+}
+
+.container {
+  overflow: auto;
+  overflow-x: scroll;
+}
+
+.sequencer {
+  border-color: purple;
+  border-style: solid;
+  border-width: 12px 0 12px 0;
+  line-height: 17px;
+  width: 100%;
+}
+
+.sequencer-row {
+  display: block;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  height: 15px;
+}
+
+.sequencer-row:hover .note {
+  background-color: rgba(255, 0, 255, 1);
+  border-color: rgba(255, 0, 255, 1);
+  opacity: 0.5;
+}
+
+.sequencer-row.highlight .note {
+  background-color: rgba(255, 0, 255, 1);
+  border-color: rgba(255, 0, 255, 1);
+}
+
+.sequencer-row:nth-child(even) {
+  border-bottom: 4px solid purple;
+}
+
+#ruler {
+  height: 10px;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, 
+  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 0.3%, 
+  rgba(0,0,0,0) 24.8%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 25.2%, 
+  rgba(0,0,0,0) 49.8%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 50.2%, 
+  rgba(0,0,0,0) 74.8%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 75.2%, 
+  rgba(0,0,0,0) 100%);
+}
+
+.notename {
+  display: inline-block;
+  width: 24px;
+  background-color: transparent;
+  border: 0;
+  font-size: 0.75rem;
+  border-top: 3px solid pink;
+}
+
+.note {
+  display: inline-block;
+  width: 3.5px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  background-color: pink;
+  border: 1px solid pink;
+}
+
+.note:hover {
+  opacity: 0.5;
+  background-color: yellow!important;
+  border-color: yellow!important;
+}
+
+.note-is-active {
+  background-color: purple!important;
+  border-color: purple!important;
+}
+
+.note-not-active {
+  background-color: solid grey;
+  border-color: solid grey;
+}
+
+.note-is-playing {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+.toggle-play {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.play-button {
+  margin: 12px 0 12px 12px;
+  /* padding: 5px 12px; */
+  width: 50px;
+  max-height: 30px;
+  display: flex;
+  /* justify-items: center; */
+  justify-content: center;
+}
+
+.play-button svg {
+  height: 25px;
+}
+
+#songmenu,
+#songtitle,
+#savesongbutton,
+#timer,
+#timer2,
+#position {
+  display: inline;
+}
+
+/* canvas#disk2d { */
+  /* display: inline-block; */
+  /* display: none; */
+  /* border: 1px solid #f8a2ea; */
+  /* box-shadow: 5px 5px 5px #ddd; */
+  /* margin: 15px 0 0; */
+/* } */
+
+#disk {
+  display: block;
+  /* border: 12px solid purple; */
+  /* border-radius: 50%; */
+}
+
+#disk #overlay {
+  display: none;
+  position: absolute;
+  left: -163px;
+  top: -161px;
+  width: 484px;
+  height: 484px;
+  background: url(https://thisoldtoy.com/fisher-price/dept-1-Audio-Vis-Mus/k-record-players/1-pics/fpt8709.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transform: rotate(0deg);
+}
+
+#disk, fieldset>input {
+  color: purple;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+#disk fieldset>input {
+  text-align: center;
+}
+
+#disk div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.track {
+  display: block;
+  border-radius: 50%;
+  border: 4px solid pink;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+#select_cursor_position, #play_cursor_position {
+  display: none;
+  top: 88px;
+  left: 193px;
+  width: 128px;
+  height: 4px;
+  background-color: rgba(255, 0, 255, 0.5);
+  border: 0;
+  transform: rotate(0deg);
+  transform-origin: -103px;
+  z-index: 30;
+}
+
+#play_cursor_position {
+  background-color: yellow;
+}
+
+.disk_note {
+  width: 2px;
+  height: 2px;
+  top: 88px;
+  background-color: purple;
+  border: 2px solid purple;
+  transform: rotate(0deg);
+  transform-origin: -102px;
+  z-index: 32;
+  box-shadow: 1px 1px 3px rgba(128, 0, 128, 0.3);
+  z-index: 32;
+}
+
+.disk_note:nth-child(1) {
+  top: 88px;
+  left: 192px;
+  transform: rotate(10deg);
+  transform-origin: -102px;
+}
+
+.disk_note:nth-child(2) {
+  top: 88px;
+  left: 196px;
+  transform: rotate(20deg);
+  transform-origin: -106px;
+}
+
+.disk_note:nth-child(3) {
+  top: 88px;
+  left: 204px;
+  transform: rotate(30deg);
+  transform-origin: -114px;
+}
+
+.disk_note:nth-child(4) {
+  top: 88px;
+  left: 208px;
+  transform: rotate(40deg);
+  transform-origin: -118px;
+}
+                    
+#beatwidth_number { width: 2.5rem; }
+
+fieldset {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+#coords {
+  height: 25px;
+}

@@ -1,0 +1,171 @@
+.wall {
+  border: 4px solid purple;
+  border-radius: 50%;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); */
+}
+
+.outside, .inside {
+  border-width: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.axe {
+  border: 0;
+  background-color: white;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 2px black;
+}
+
+#wall1 {
+  width: 484px; height: 484px; z-index: 1;
+  background-color: pink;
+}
+#track1 {
+  width: 460px; height: 460px;
+}
+#track2 {
+  width: 452px; height: 452px;
+}
+#wall2 {
+  width: 444px; height: 444px;
+}
+#track3 {
+  width: 436px; height: 436px;
+}
+#track4 {
+  width: 428px; height: 428px;
+}
+#wall3 {
+  width: 420px; height: 420px;
+}
+#track5 {
+  width: 412px; height: 412px;
+}
+#track6 {
+  width: 404px; height: 404px;
+}
+#wall4 {
+  width: 396px; height: 396px;
+}
+#track7 {
+  width: 388px; height: 388px;
+}
+#track8 {
+  width: 380px; height: 380px;
+}
+#wall5 {
+  width: 372px; height: 372px;
+}
+#track9 {
+  width: 364px; height: 364px;
+}
+#track10 {
+  width: 356px; height: 356px;
+}
+#wall6 {
+  width: 348px; height: 348px;
+}
+#track11 {
+  width: 340px; height: 340px;
+}
+#track12 {
+  width: 332px; height: 332px;
+}
+#wall7 {
+  width: 324px; height: 324px;
+}
+#track13 {
+  width: 316px; height: 316px;
+}
+#track14 {
+  width: 308px; height: 308px;
+}
+#wall8 {
+  width: 300px; height: 300px;
+}
+#track15 {
+  width: 292px; height: 292px;
+}
+#track16 {
+  width: 284px; height: 284px;
+}
+#wall9 {
+  width: 276px; height: 276px;
+}
+#track17 {
+  width: 268px; height: 268px;
+}
+#track18 {
+  width: 260px; height: 260px;
+}
+#wall10 {
+  width: 252px; height: 252px;
+}
+#track19 {
+  width: 244px; height: 244px;
+}
+#track20 {
+  width: 236px; height: 236px;
+}
+#wall11 {
+  width: 228px; height: 228px;
+}
+#track21 {
+  width: 220px; height: 220px;
+}
+#track22 {
+  width: 212px; height: 212px;
+}
+#wall12 {
+  width: 204px; height: 204px;
+}
+#centralaxe {
+  position: absolute;
+  left: 78px; top: 78px;
+  width: 24px; height: 24px;
+  z-index: 200;
+}
+#leftaxe {
+  position: absolute;
+  left: 8px; top: 84px;
+  z-index: 200;
+}
+#topaxe {
+  position: absolute;
+  left: 84px; top: 8px;
+  z-index: 200;
+}
+#bottomaxe {
+  position: absolute;
+  left: 84px; top: 160px;
+  z-index: 200;
+}
+#rightaxe {
+  position: absolute;
+  left: 160px; top: 84px;
+  z-index: 200;
+}
+#disk_label_logo {
+  left: 10px; top: 50px;
+  width: 160px;
+  text-align: center;
+}
+#disk_label_number {
+  left: 10px; top: 112px;
+  width: 160px;
+  text-align: center;
+}
+#disk_label_text_bottom, #disk_label_text_top { fill: purple; }
+#disk_label_text_top { letter-spacing: 10%; }
+#disk_label_text_bottom { letter-spacing: 10%; }
+#disk svg {
+  position: absolute;
+  left: 26px; top: 26px;
+  width: 128px; height: 128px;
+}
+
+#disk svg g {
+  font-family: sans-serif; font-weight: 900; font-size:0.75rem;
+}
