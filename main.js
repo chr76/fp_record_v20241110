@@ -1,6 +1,3 @@
-import classNames from "https://cdn.skypack.dev/classnames/bind";
-import * as Tone from "https://cdn.skypack.dev/tone";
-
 const noteslib = ['A#6', 'G#6', 'G6', 'F6', 'F6', 'D#6', 'D#6', 'C#6', 'C#6', 'C6', 'C6', 'A#5', 'A#5', 'G#5', 'G#5', 'G5', 'F5', 'D#5', 'C5', 'A#4', 'G#4', 'D#4', ];
 const notes = noteslib.slice(0);
 let started = false;
